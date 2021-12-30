@@ -1,4 +1,5 @@
 # Rubik-s-cube-solver-v1.0
+WORKING IN PROGRESS
 This is a rubik's cube solver using the layers method, each layer is built one after the other
 
 For now I only know how to solve a rubik's cube by this method, so i decided to make it automatically by myself, without any other search about the logic.
