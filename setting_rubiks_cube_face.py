@@ -1,36 +1,16 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[14]:
-
-
 import numpy as np
-import funções as f
+from functions import *
 
+# arrays IDs/cordenates
+# in the future the inputs will come from the user, from a original ordinary rubik's cube
+white = [1 for _ in range(9)]
+blue = [2 for _ in range(9)]
+green = [3 for _ in range(9)]
+yellow = [4 for _ in range(9)]
+orange = [5 for _ in range(9)]
+red = [6 for _ in range(9)]
 
-# In[55]:
-
-
-# arrays IDs
-red = [('r'+str(x)) for x in range(9)]
-blue = [('b'+str(x)) for x in range(9)]
-white = [('w'+str(x)) for x in range(9)]
-green = [('g'+str(x)) for x in range(9)]
-yellow = [('y'+str(x)) for x in range(9)]
-orange = [('o'+str(x)) for x in range(9)]
-
-
-# In[56]:
-
-
-colours = [red, blue, white, green, yellow, orange]
-for item in colours: print(item)
-
-
-# In[57]:
-
-
-# creating each face from cube
+# setting the IDs in each cube's face 
 face_blue = np.array([(blue[0], blue[1], blue[2]), 
                       (blue[3], blue[4], blue[5]),
                       (blue[6], blue[7], blue[8])])
@@ -55,21 +35,7 @@ face_orange = np.array([(orange[0], orange[1], orange[2]),
                         (orange[3], orange[4], orange[5]), 
                         (orange[6], orange[7], orange[8])])
 
-
-# In[58]:
-
-
-print(face_blue, '\n')
-print(face_red, '\n')
-print(face_orange, '\n')
-print(face_white, '\n')
-print(face_yellow)
-
-
-# In[59]:
-
-
-def rotate(times, main_face_array, main_face_colour):
+'''def rotate(times, main_face_array, main_face_colour):
 
     np.rot90(main_face_array, times)
 
@@ -284,16 +250,4 @@ def rotate(times, main_face_array, main_face_colour):
         face_green[2, 0] = saved_r1
         face_green[2, 1] = saved_r2
         face_green[2, 2] = saved_r3
-
-
-# In[68]:
-
-
-rotate(1, face_blue, 'blue')
-print(face_yellow, '\n')
-print(face_blue, '\n')
-print(face_red, '\n')
-print(face_orange, '\n')
-print(face_green, '\n')
-print(face_white)
-
+'''

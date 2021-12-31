@@ -1,10 +1,27 @@
 import numpy as np
+from setting_rubiks_cube_face import *
+from random import randint
+import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
+
+
+def show_face(face_name):
+    # display de face's array with colours
+    cmap, norm = mcolors.from_levels_and_colors([1, 2, 3, 4, 5, 6, 7], ['lavender', 'blue', 'limegreen', 'yellow', 'orange', 'red'])
+
+    plt.imshow(face_name, cmap=cmap, norm=norm)
+    plt.grid()
+    plt.colorbar()
+
+    plt.show()
 
 
 def rotate(direction, main_face_array, main_face_colour):
-
+    # this function is a little bit trash
+    # rotate the array/matrix
     np.rot90(main_face_array, direction)
 
+    # check which face is and rotate the correlacionate colours
     if main_face_colour == 'blue':
 
         # pre move backup
