@@ -1,0 +1,35 @@
+# correspondencias
+# FRONTEIRAS
+# amarelo
+# laranja - azul - vermelho - verde - laranja
+# branco
+#
+# QUINAS
+# azul[8] = vermelho[6] = branco[2]
+# azul[6] = lanraja[8] = branco[0]
+# azul[2] = vermelho[0] = amarelo[8]
+# azul[0] = lanraja[2] = amarelo[6]
+
+# verde[8] = lanraja[6] = branco[6]
+# verde[6] = vermelho[8] = branco[8]
+# verde[2] = laranja[0] = amarelo[0]
+# verde[0] = vermelho[2] = amarelo[2]
+
+# BORDAS
+# azul[1] = amarelo[7]
+# azul[5] = vermelho[3]
+# azul[7] = branco[1]
+# azul[3] = laranja[5]
+
+# vermelho[1] = amarelo[5]
+# vermelho[7] = branco[5]
+# laranja [1] = amarelo[3]
+# laranja[7] = branco[3]
+
+# verde[1] = amarelo[1]
+# verde[5] = laranja[3]
+# verde[7] = branco[7]
+# verde[3] = vemelho[5]
+
+# CENTRAL
+# azul[4], vermelho[4], branco[4], verde[4], amarelo[4], laranja[4]
