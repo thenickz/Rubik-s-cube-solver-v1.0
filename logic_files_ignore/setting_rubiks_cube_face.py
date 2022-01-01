@@ -1,27 +1,44 @@
 import numpy as np
-from setting_rubiks_cube_face import *
-from random import randint
-import matplotlib.pyplot as plt
-import matplotlib.colors as mcolors
+from functions import *
 
+# arrays IDs/cordenates
+# in the future the inputs will come from the user, from a original ordinary rubik's cube
+white = [1 for _ in range(9)]
+blue = [2 for _ in range(9)]
+green = [3 for _ in range(9)]
+yellow = [4 for _ in range(9)]
+orange = [5 for _ in range(9)]
+red = [6 for _ in range(9)]
 
-def show_face(face_name):
-    # display de face's array with colours
-    cmap, norm = mcolors.from_levels_and_colors([1, 2, 3, 4, 5, 6, 7], ['lavender', 'blue', 'limegreen', 'yellow', 'orange', 'red'])
+# setting the IDs in each cube's face 
+face_blue = np.array([(blue[0], blue[1], blue[2]), 
+                      (blue[3], blue[4], blue[5]),
+                      (blue[6], blue[7], blue[8])])
 
-    plt.imshow(face_name, cmap=cmap, norm=norm)
-    plt.grid()
-    plt.colorbar()
+face_red = np.array([(red[0], red[1], red[2]), 
+                     (red[3], red[4], red[5]), 
+                     (red[6], red[7], red[8])])
 
-    plt.show()
+face_white = np.array([(white[0], white[1], white[2]), 
+                       (white[3], white[4], white[5]), 
+                       (white[6], white[7], white[8])])
 
+face_green = np.array([(green[0], green[1], green[2]), 
+                       (green[3], green[4], green[5]), 
+                       (green[6], green[7], green[8])])
 
-def rotate(main_face_array, main_face_colour):
-    # this function is a little bit trash
-    # rotate the array/matrix
-    np.rot90(main_face_array)
+face_yellow = np.array([(yellow[0], yellow[1], yellow[2]), 
+                        (yellow[3], yellow[4], yellow[5]), 
+                        (yellow[6], yellow[7], yellow[8])])
 
-    # check which face is and rotate the correlacionate colours
+face_orange = np.array([(orange[0], orange[1], orange[2]), 
+                        (orange[3], orange[4], orange[5]), 
+                        (orange[6], orange[7], orange[8])])
+
+'''def rotate(times, main_face_array, main_face_colour):
+
+    np.rot90(main_face_array, times)
+
     if main_face_colour == 'blue':
 
         # pre move backup
@@ -233,3 +250,4 @@ def rotate(main_face_array, main_face_colour):
         face_green[2, 0] = saved_r1
         face_green[2, 1] = saved_r2
         face_green[2, 2] = saved_r3
+'''
